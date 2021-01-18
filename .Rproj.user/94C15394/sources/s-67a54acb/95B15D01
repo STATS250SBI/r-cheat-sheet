@@ -1,7 +1,7 @@
 {
     "id": "95B15D01",
-    "path": "/cloud/project/cheatsheet.Rmd",
-    "project_path": "cheatsheet.Rmd",
+    "path": "/cloud/project/index.Rmd",
+    "project_path": "index.Rmd",
     "type": "r_markdown",
     "hash": "212975815",
     "contents": "",
@@ -19,7 +19,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1610980749126,
+    "last_content_update": 1610980749,
     "read_only": false,
     "read_only_alternatives": []
 }
