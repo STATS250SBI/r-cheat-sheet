@@ -2,7 +2,10 @@
 title: "R Code Cheat Sheet"
 author: "STATS 250 Instructional Team"
 date: "1/18/2021"
-output: html_document
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
 ---
 
 ## `<-`
