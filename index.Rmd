@@ -1,22 +1,31 @@
 ---
 title: "R Code Cheat Sheet"
 author: "STATS 250 Instructional Team"
-date: "1/18/2021"
+date: "Last updated `r format(Sys.time(), '%d %B %Y')`" 
 output: 
   html_document:
     toc: yes
     toc_float: yes
 ---
 
-## `<-`
+# External Resources
+
+- List of color names in R: http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
+
+# Assignment and Data Import
+
+### `<-`
 - Assigns a value to a name
 - `name <- value`
 
-## `read.csv(file, stringsAsFactors = TRUE)`
+### `read.csv(file, stringsAsFactors = TRUE)`
 - `file` is the name of the file from which data are to be read
 - `stringsAsFactors` should generally be set to `TRUE` (all caps): this determines how text-like data in a CSV file is interpreted by R.
 
-## `head(x, n)`
+
+# Data Previewing
+
+### `head(x, n)`
 - `x` is a data.frame
 - `n` is the number of rows to print
 
