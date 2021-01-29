@@ -14,20 +14,60 @@ output:
 
 # Assignment and Data Import
 
-### `<-`
+## `<-`
 - Assigns a value to a name
 - `name <- value`
 
-### `read.csv(file, stringsAsFactors = TRUE)`
+## `read.csv(file, stringsAsFactors = TRUE)`
 - `file` is the name of the file from which data are to be read
 - `stringsAsFactors` should generally be set to `TRUE` (all caps): this determines how text-like data in a CSV file is interpreted by R.
+
+## `$`
+- what is a dollar sign really
+- `data_set_name$data_set_variable`
 
 
 # Data Previewing
 
-### `head(x, n)`
+## `head(x, n)`
 - `x` is a data.frame
 - `n` is the number of rows to print
 
 ## `str(object)`
 - `object` is the R object about which you want to have some information (i.e., see the `str`ucture of).
+
+
+# Numerical Summaries
+
+## `table(data_set_name$data_set_variable)`
+- creates a table of the frequencies of one categorical variable
+
+## `table(data_set_name$data_set_variable, data_set_name$data_set_variable)`
+- creates a two way table of the frequencies of two categorical variables
+
+## `summary(data_set_name$data_set_variable)`
+- creates the five number summary of a quantitative variable
+
+# Graphical Summaries
+
+## `barplot(table(data_set_name$data_set_variable))`
+- creates a barplot of a categorical variable
+
+
+## `hist(data_set_name$data_set_variable)`
+- creates a histogram of a quantitative variable
+
+## `boxplot(data_set_name$data_set_variable)`
+- creates a boxplot of a quantitative variable
+
+## Important plotting arguments
+
+### `main = "Title of Your Graph in Double Quotes"`
+- graph title that must be inside a set of double quotes
+
+### `xlab = "x-axis Label of Your Graph in Double Quotes"`
+- the x- (horizontal) axis label that must be inside a set of double quotes
+
+### `ylab = "y-axis Label of Your Graph in Double Quotes"`
+- the y- (vertical) axis label that must be inside a set of double quotes
+
