@@ -10,64 +10,90 @@ output:
 
 # External Resources
 
-- List of color names in R: http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
+-   List of color names in R: <http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf>
 
-# Assignment and Data Import
+# Assignment and Data Manipulation
 
 ## `<-`
-- Assigns a value to a name
-- `name <- value`
+
+-   Assigns a value to a name
+-   `name <- value`
 
 ## `read.csv(file, stringsAsFactors = TRUE)`
-- `file` is the name of the file from which data are to be read
-- `stringsAsFactors` should generally be set to `TRUE` (all caps): this determines how text-like data in a CSV file is interpreted by R.
+
+-   `file` is the name of the file from which data are to be read
+-   `stringsAsFactors` should generally be set to `TRUE` (all caps): this determines how text-like data in a CSV file is interpreted by R.
 
 ## `$`
-- what is a dollar sign really
-- `data_set_name$data_set_variable`
 
+-   what is a dollar sign really
+-   `data_set_name$data_set_variable`
+
+## `subset(data, subset)`
+- `data` is the name of the data.frame you want to make a subset of
+- `subset` is a logical expression indicating rows to keep. Remember to use "logical equals", `==` to test for equality; you can use regular comparison operators as well, like `>` for greater than, `<=` for less than or equal to, etc.
 
 # Data Previewing
 
 ## `head(x, n)`
-- `x` is a data.frame
-- `n` is the number of rows to print
+
+-   `x` is a data.frame
+-   `n` is the number of rows to print
 
 ## `str(object)`
-- `object` is the R object about which you want to have some information (i.e., see the `str`ucture of).
 
+-   `object` is the R object about which you want to have some information (i.e., see the `str`ucture of).
 
 # Numerical Summaries
 
 ## `table(data_set_name$data_set_variable)`
-- creates a table of the frequencies of one categorical variable
+
+-   creates a table of the frequencies of one categorical variable
 
 ## `table(data_set_name$data_set_variable, data_set_name$data_set_variable)`
-- creates a two way table of the frequencies of two categorical variables
+
+-   creates a two way table of the frequencies of two categorical variables
 
 ## `summary(data_set_name$data_set_variable)`
-- creates the five number summary of a quantitative variable
+
+-   creates the five number summary of a quantitative variable
 
 # Graphical Summaries
 
 ## `barplot(table(data_set_name$data_set_variable))`
-- creates a barplot of a categorical variable
 
+-   creates a barplot of a categorical variable
 
-## `hist(data_set_name$data_set_variable)`
-- creates a histogram of a quantitative variable
+## `hist(data_set_name$data_set_variable, breaks)`
 
-## `boxplot(data_set_name$data_set_variable)`
-- creates a boxplot of a quantitative variable
+-   creates a histogram of a quantitative variable
+-   `breaks` is the approximate number of breaks you want in the histogram (R will sometimes ignore this to make the plot prettier)
+
+## `boxplot(x, ..., xlab, ylab, main, col)`
+
+-   `x` is the data you want to create a boxplot of
+-   `...` is additional data to include in the boxplot
+
+## `plot(x, y, xlab, ylab, main, col)`
+- `x` is the variable you want to plot on the x axis
+- `y` is the variable you want to plot on the y axis
 
 ## Important plotting arguments
 
+Note that since a table is not a plot, these arguments won't work in the `table()` function.
+
 ### `main = "Title of Your Graph in Double Quotes"`
-- graph title that must be inside a set of double quotes
+
+-   graph title that must be inside a set of double quotes
 
 ### `xlab = "x-axis Label of Your Graph in Double Quotes"`
-- the x- (horizontal) axis label that must be inside a set of double quotes
+
+-   the x- (horizontal) axis label that must be inside a set of double quotes
 
 ### `ylab = "y-axis Label of Your Graph in Double Quotes"`
-- the y- (vertical) axis label that must be inside a set of double quotes
 
+-   the y- (vertical) axis label that must be inside a set of double quotes
+
+### `col = c("color1", ...)`
+
+-   a *vector* of color names enclosed in the `c()` function; e.g., `col = c("red", "blue", "green")`.

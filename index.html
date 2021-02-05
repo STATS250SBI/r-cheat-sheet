@@ -267,7 +267,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">R Code Cheat Sheet</h1>
 <h4 class="author">STATS 250 Instructional Team</h4>
-<h4 class="date">Last updated 29 January 2021</h4>
+<h4 class="date">Last updated 05 February 2021</h4>
 
 </div>
 
@@ -278,8 +278,8 @@ div.tocify {
 <li>List of color names in R: <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf" class="uri">http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf</a></li>
 </ul>
 </div>
-<div id="assignment-and-data-import" class="section level1">
-<h1>Assignment and Data Import</h1>
+<div id="assignment-and-data-manipulation" class="section level1">
+<h1>Assignment and Data Manipulation</h1>
 <div id="section" class="section level2">
 <h2><code>&lt;-</code></h2>
 <ul>
@@ -299,6 +299,13 @@ div.tocify {
 <ul>
 <li>what is a dollar sign really</li>
 <li><code>data_set_name$data_set_variable</code></li>
+</ul>
+</div>
+<div id="subsetdata-subset" class="section level2">
+<h2><code>subset(data, subset)</code></h2>
+<ul>
+<li><code>data</code> is the name of the data.frame you want to make a subset of</li>
+<li><code>subset</code> is a logical expression indicating rows to keep. Remember to use “logical equals”, <code>==</code> to test for equality; you can use regular comparison operators as well, like <code>&gt;</code> for greater than, <code>&lt;=</code> for less than or equal to, etc.</li>
 </ul>
 </div>
 </div>
@@ -347,20 +354,30 @@ div.tocify {
 <li>creates a barplot of a categorical variable</li>
 </ul>
 </div>
-<div id="histdata_set_namedata_set_variable" class="section level2">
-<h2><code>hist(data_set_name$data_set_variable)</code></h2>
+<div id="histdata_set_namedata_set_variable-breaks" class="section level2">
+<h2><code>hist(data_set_name$data_set_variable, breaks)</code></h2>
 <ul>
 <li>creates a histogram of a quantitative variable</li>
+<li><code>breaks</code> is the approximate number of breaks you want in the histogram (R will sometimes ignore this to make the plot prettier)</li>
 </ul>
 </div>
-<div id="boxplotdata_set_namedata_set_variable" class="section level2">
-<h2><code>boxplot(data_set_name$data_set_variable)</code></h2>
+<div id="boxplotx-...-xlab-ylab-main-col" class="section level2">
+<h2><code>boxplot(x, ..., xlab, ylab, main, col)</code></h2>
 <ul>
-<li>creates a boxplot of a quantitative variable</li>
+<li><code>x</code> is the data you want to create a boxplot of</li>
+<li><code>...</code> is additional data to include in the boxplot</li>
+</ul>
+</div>
+<div id="plotx-y-xlab-ylab-main-col" class="section level2">
+<h2><code>plot(x, y, xlab, ylab, main, col)</code></h2>
+<ul>
+<li><code>x</code> is the variable you want to plot on the x axis</li>
+<li><code>y</code> is the variable you want to plot on the y axis</li>
 </ul>
 </div>
 <div id="important-plotting-arguments" class="section level2">
 <h2>Important plotting arguments</h2>
+<p>Note that since a table is not a plot, these arguments won’t work in the <code>table()</code> function.</p>
 <div id="main-title-of-your-graph-in-double-quotes" class="section level3">
 <h3><code>main = &quot;Title of Your Graph in Double Quotes&quot;</code></h3>
 <ul>
@@ -377,6 +394,12 @@ div.tocify {
 <h3><code>ylab = &quot;y-axis Label of Your Graph in Double Quotes&quot;</code></h3>
 <ul>
 <li>the y- (vertical) axis label that must be inside a set of double quotes</li>
+</ul>
+</div>
+<div id="col-ccolor1-..." class="section level3">
+<h3><code>col = c(&quot;color1&quot;, ...)</code></h3>
+<ul>
+<li>a <em>vector</em> of color names enclosed in the <code>c()</code> function; e.g., <code>col = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;)</code>.</li>
 </ul>
 </div>
 </div>
