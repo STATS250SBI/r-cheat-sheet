@@ -12,7 +12,7 @@ output:
 
 -   List of color names in R: <http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf>
 
-# Assignment and Data Manipulation
+# Assignment, Data Manipulation, General Syntax
 
 ## `<-`
 
@@ -36,6 +36,11 @@ output:
 
 ## `c(...)`
 - `...` is a comma-separated list of objects to be combined into a vector. These can be numbers, text/"strings", etc., but they all need to be the same kind of thing.
+
+### `~`
+- Read as "by"
+- Used in side-by-side boxplots, scatterplots, and finding linear models
+- `y ~ x` is the correct syntax for linear; `numeric_variable ~` categorical_variable` is the correct syntax for side-by-side boxplots
 
 # Data Previewing
 
@@ -62,6 +67,12 @@ output:
 
 -   creates the five number summary of a quantitative variable
 
+## `cor(x, y)`
+- Finds the correlation coefficient between the numeric variable *x* and the numeric variable *y*
+
+## `cor(numeric_data_frame)`
+- Prints a correlation matrix for a data frame with all numeric variables
+
 # Graphical Summaries
 
 ## `barplot(table(data_set_name$data_set_variable))`
@@ -83,6 +94,9 @@ output:
 -   `x` is the variable you want to plot on the x axis
 -   `y` is the variable you want to plot on the y axis
 
+## `abline(linear_model_name)`
+- Will plot the line found in `linear_model_name`
+
 ## Important plotting arguments
 
 Note that since a table is not a plot, these arguments won't work in the `table()` function.
@@ -102,6 +116,15 @@ Note that since a table is not a plot, these arguments won't work in the `table(
 ### `col = c("color1", ...)`
 
 -   a *vector* of color names enclosed in the `c()` function; e.g., `col = c("red", "blue", "green")`.
+
+# Linear Regression
+
+## `lm(y ~ x, data = data_name)`
+- Finds the linear model between *x* and *y* from `data_name`
+- You'll want to assign this a name in order to use it later
+
+## `summary(linear_model_name)`
+- Prints relevant values of a linear model
 
 # Simulation
 

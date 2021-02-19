@@ -278,8 +278,8 @@ div.tocify {
 <li>List of color names in R: <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf" class="uri">http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf</a></li>
 </ul>
 </div>
-<div id="assignment-and-data-manipulation" class="section level1">
-<h1>Assignment and Data Manipulation</h1>
+<div id="assignment-data-manipulation-general-syntax" class="section level1">
+<h1>Assignment, Data Manipulation, General Syntax</h1>
 <div id="section" class="section level2">
 <h2><code>&lt;-</code></h2>
 <ul>
@@ -313,6 +313,14 @@ div.tocify {
 <ul>
 <li><code>...</code> is a comma-separated list of objects to be combined into a vector. These can be numbers, text/“strings”, etc., but they all need to be the same kind of thing.</li>
 </ul>
+<div id="section-2" class="section level3">
+<h3><code>~</code></h3>
+<ul>
+<li>Read as “by”</li>
+<li>Used in side-by-side boxplots, scatterplots, and finding linear models</li>
+<li><code>y ~ x</code> is the correct syntax for linear; <code>numeric_variable ~</code> categorical_variable` is the correct syntax for side-by-side boxplots</li>
+</ul>
+</div>
 </div>
 </div>
 <div id="data-previewing" class="section level1">
@@ -351,6 +359,18 @@ div.tocify {
 <li>creates the five number summary of a quantitative variable</li>
 </ul>
 </div>
+<div id="corx-y" class="section level2">
+<h2><code>cor(x, y)</code></h2>
+<ul>
+<li>Finds the correlation coefficient between the numeric variable <em>x</em> and the numeric variable <em>y</em></li>
+</ul>
+</div>
+<div id="cornumeric_data_frame" class="section level2">
+<h2><code>cor(numeric_data_frame)</code></h2>
+<ul>
+<li>Prints a correlation matrix for a data frame with all numeric variables</li>
+</ul>
+</div>
 </div>
 <div id="graphical-summaries" class="section level1">
 <h1>Graphical Summaries</h1>
@@ -381,6 +401,12 @@ div.tocify {
 <li><code>y</code> is the variable you want to plot on the y axis</li>
 </ul>
 </div>
+<div id="ablinelinear_model_name" class="section level2">
+<h2><code>abline(linear_model_name)</code></h2>
+<ul>
+<li>Will plot the line found in <code>linear_model_name</code></li>
+</ul>
+</div>
 <div id="important-plotting-arguments" class="section level2">
 <h2>Important plotting arguments</h2>
 <p>Note that since a table is not a plot, these arguments won’t work in the <code>table()</code> function.</p>
@@ -408,6 +434,22 @@ div.tocify {
 <li>a <em>vector</em> of color names enclosed in the <code>c()</code> function; e.g., <code>col = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;)</code>.</li>
 </ul>
 </div>
+</div>
+</div>
+<div id="linear-regression" class="section level1">
+<h1>Linear Regression</h1>
+<div id="lmy-x-data-data_name" class="section level2">
+<h2><code>lm(y ~ x, data = data_name)</code></h2>
+<ul>
+<li>Finds the linear model between <em>x</em> and <em>y</em> from <code>data_name</code></li>
+<li>You’ll want to assign this a name in order to use it later</li>
+</ul>
+</div>
+<div id="summarylinear_model_name" class="section level2">
+<h2><code>summary(linear_model_name)</code></h2>
+<ul>
+<li>Prints relevant values of a linear model</li>
+</ul>
 </div>
 </div>
 <div id="simulation" class="section level1">
