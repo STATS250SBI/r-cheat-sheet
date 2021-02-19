@@ -30,8 +30,12 @@ output:
 -   `data_set_name$data_set_variable`
 
 ## `subset(data, subset)`
-- `data` is the name of the data.frame you want to make a subset of
-- `subset` is a logical expression indicating rows to keep. Remember to use "logical equals", `==` to test for equality; you can use regular comparison operators as well, like `>` for greater than, `<=` for less than or equal to, etc.
+
+-   `data` is the name of the data.frame you want to make a subset of
+-   `subset` is a logical expression indicating rows to keep. Remember to use "logical equals", `==` to test for equality; you can use regular comparison operators as well, like `>` for greater than, `<=` for less than or equal to, etc.
+
+## `c(...)`
+- `...` is a comma-separated list of objects to be combined into a vector. These can be numbers, text/"strings", etc., but they all need to be the same kind of thing.
 
 # Data Previewing
 
@@ -75,8 +79,9 @@ output:
 -   `...` is additional data to include in the boxplot
 
 ## `plot(x, y, xlab, ylab, main, col)`
-- `x` is the variable you want to plot on the x axis
-- `y` is the variable you want to plot on the y axis
+
+-   `x` is the variable you want to plot on the x axis
+-   `y` is the variable you want to plot on the y axis
 
 ## Important plotting arguments
 
@@ -97,3 +102,30 @@ Note that since a table is not a plot, these arguments won't work in the `table(
 ### `col = c("color1", ...)`
 
 -   a *vector* of color names enclosed in the `c()` function; e.g., `col = c("red", "blue", "green")`.
+
+# Simulation
+
+## `rep(x, times)`
+Makes a vector consisting of `x` copy/pasted `times` times
+
+- `x` is the thing you want `rep`eated
+- `times` is the number of times you want to `rep`eat `x`
+
+## `set.seed(seed)`
+Sets the "seed" of R's random number generator. After setting the seed, the sequence of random numbers R will produce is entirely determined/predictable. This is useful for ensuring you get the same results whenever you knit your code.
+
+- `seed` is an integer. The seed you want to set.
+
+## `sample(x, size, replace = FALSE)`
+Takes a sample of the specified size from the elements of `x` using either with or without replacement.
+
+- `x` is a vector of elements to sample from
+- `size` is a non-negative integer giving the number of items to choose from `x`
+- `replace` should be `TRUE` if you want to sample with replacement; defaults to `FALSE` to sample without replacement
+
+## `replicate(n, expr)`
+Runs the code in `expr` `n` times and reports the results. *NOT* the same as `rep()` - `replicate()` re-runs code; `rep()` copies and pastes the result of one run of the code.
+
+- `n` is the number of times to run the code in `expr`
+- `expr` is an "expression" -- basically a block of code contained in curly braces {} that you want to run `n` times.
+

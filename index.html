@@ -267,7 +267,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">R Code Cheat Sheet</h1>
 <h4 class="author">STATS 250 Instructional Team</h4>
-<h4 class="date">Last updated 05 February 2021</h4>
+<h4 class="date">Last updated 19 February 2021</h4>
 
 </div>
 
@@ -306,6 +306,12 @@ div.tocify {
 <ul>
 <li><code>data</code> is the name of the data.frame you want to make a subset of</li>
 <li><code>subset</code> is a logical expression indicating rows to keep. Remember to use “logical equals”, <code>==</code> to test for equality; you can use regular comparison operators as well, like <code>&gt;</code> for greater than, <code>&lt;=</code> for less than or equal to, etc.</li>
+</ul>
+</div>
+<div id="c..." class="section level2">
+<h2><code>c(...)</code></h2>
+<ul>
+<li><code>...</code> is a comma-separated list of objects to be combined into a vector. These can be numbers, text/“strings”, etc., but they all need to be the same kind of thing.</li>
 </ul>
 </div>
 </div>
@@ -402,6 +408,41 @@ div.tocify {
 <li>a <em>vector</em> of color names enclosed in the <code>c()</code> function; e.g., <code>col = c(&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;)</code>.</li>
 </ul>
 </div>
+</div>
+</div>
+<div id="simulation" class="section level1">
+<h1>Simulation</h1>
+<div id="repx-times" class="section level2">
+<h2><code>rep(x, times)</code></h2>
+<p>Makes a vector consisting of <code>x</code> copy/pasted <code>times</code> times</p>
+<ul>
+<li><code>x</code> is the thing you want <code>rep</code>eated</li>
+<li><code>times</code> is the number of times you want to <code>rep</code>eat <code>x</code></li>
+</ul>
+</div>
+<div id="set.seedseed" class="section level2">
+<h2><code>set.seed(seed)</code></h2>
+<p>Sets the “seed” of R’s random number generator. After setting the seed, the sequence of random numbers R will produce is entirely determined/predictable. This is useful for ensuring you get the same results whenever you knit your code.</p>
+<ul>
+<li><code>seed</code> is an integer. The seed you want to set.</li>
+</ul>
+</div>
+<div id="samplex-size-replace-false" class="section level2">
+<h2><code>sample(x, size, replace = FALSE)</code></h2>
+<p>Takes a sample of the specified size from the elements of <code>x</code> using either with or without replacement.</p>
+<ul>
+<li><code>x</code> is a vector of elements to sample from</li>
+<li><code>size</code> is a non-negative integer giving the number of items to choose from <code>x</code></li>
+<li><code>replace</code> should be <code>TRUE</code> if you want to sample with replacement; defaults to <code>FALSE</code> to sample without replacement</li>
+</ul>
+</div>
+<div id="replicaten-expr" class="section level2">
+<h2><code>replicate(n, expr)</code></h2>
+<p>Runs the code in <code>expr</code> <code>n</code> times and reports the results. <em>NOT</em> the same as <code>rep()</code> - <code>replicate()</code> re-runs code; <code>rep()</code> copies and pastes the result of one run of the code.</p>
+<ul>
+<li><code>n</code> is the number of times to run the code in <code>expr</code></li>
+<li><code>expr</code> is an “expression” – basically a block of code contained in curly braces {} that you want to run <code>n</code> times.</li>
+</ul>
 </div>
 </div>
 
