@@ -152,3 +152,34 @@ Runs the code in `expr` `n` times and reports the results. *NOT* the same as `re
 - `n` is the number of times to run the code in `expr`
 - `expr` is an "expression" -- basically a block of code contained in curly braces {} that you want to run `n` times.
 
+## `shuffle_two_groups(data)`
+Shuffles `data` for use in two-proportion simulations.
+- *NOTE* this is not a standard R function and cannot be used without running `shuffle_two_groups.R` provided to you in relevant labs.
+
+
+# Distributions
+
+## Normal Distribution 
+
+### `pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)`
+- `q` refers to the value you want to find the area above or below
+  - `pnorm(q, 0, 1)` gives $P(Z < q)$ where $Z$ is $N(0,1)$
+- `mean` refers to $\mu$, defaults to 0
+- `sd` refers to $\sigma$, defaults to 1
+- `lower.tail` controls which direction to "shade": `lower.tail = TRUE` goes less than `q`, `lower.tail = FALSE` goes greater than `q`; defaults to `TRUE`
+
+### `qnorm(p, mean = 0, sd = 1, lower.tail = TRUE)`
+- `p` refers to the area under the curve
+  - `qnorm(p, 0, 1)` is the number such that the area to the left of it is `p`
+- `mean` refers to $\mu$, defaults to 0
+- `sd` refers to $\sigma$, defaults to 1
+- `lower.tail` controls which direction to "shade": `lower.tail = TRUE` goes less than `q`, `lower.tail = FALSE` goes greater than `q`; defaults to `TRUE`
+
+### `plot_norm(mean = 0, sd = 1, shadeValues, direction, col.shade, ...)`
+- `mean` refers to $\mu$, defaults to 0
+- `sd` refers to $\sigma$, defaults to 1
+- `shadeValues` is a vector of up to 2 numbers that define the region you want to shade
+- `direction` can be one of `less`, `greater`, `between`, or `beyond`, and controls the direction of shading between `shadeValues`. Must be `less` or `greater` if `shadeValues` has only one element; `between` or `beyond` if two
+- `col.shade` controls the color of the shaded region, defaults to `"cornflowerblue"`
+- `...` lets you specify other graphical parameters to control the appearance of the normal curve (e.g., `lwd`, `lty`, `col`, etc.)
+- *NOTE* this is not a standard R function and cannot be used without running `plot_norm.R` provided to you in relevant labs.

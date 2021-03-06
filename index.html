@@ -267,7 +267,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">R Code Cheat Sheet</h1>
 <h4 class="author">STATS 250 Instructional Team</h4>
-<h4 class="date">Last updated 19 February 2021</h4>
+<h4 class="date">Last updated 06 March 2021</h4>
 
 </div>
 
@@ -485,6 +485,52 @@ div.tocify {
 <li><code>n</code> is the number of times to run the code in <code>expr</code></li>
 <li><code>expr</code> is an “expression” – basically a block of code contained in curly braces {} that you want to run <code>n</code> times.</li>
 </ul>
+</div>
+<div id="shuffle_two_groupsdata" class="section level2">
+<h2><code>shuffle_two_groups(data)</code></h2>
+<p>Shuffles <code>data</code> for use in two-proportion simulations. - <em>NOTE</em> this is not a standard R function and cannot be used without running <code>shuffle_two_groups.R</code> provided to you in relevant labs.</p>
+</div>
+</div>
+<div id="distributions" class="section level1">
+<h1>Distributions</h1>
+<div id="normal-distribution" class="section level2">
+<h2>Normal Distribution</h2>
+<div id="pnormq-mean-0-sd-1-lower.tail-true" class="section level3">
+<h3><code>pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)</code></h3>
+<ul>
+<li><code>q</code> refers to the value you want to find the area above or below
+<ul>
+<li><code>pnorm(q, 0, 1)</code> gives <span class="math inline">\(P(Z &lt; q)\)</span> where <span class="math inline">\(Z\)</span> is <span class="math inline">\(N(0,1)\)</span></li>
+</ul></li>
+<li><code>mean</code> refers to <span class="math inline">\(\mu\)</span>, defaults to 0</li>
+<li><code>sd</code> refers to <span class="math inline">\(\sigma\)</span>, defaults to 1</li>
+<li><code>lower.tail</code> controls which direction to “shade”: <code>lower.tail = TRUE</code> goes less than <code>q</code>, <code>lower.tail = FALSE</code> goes greater than <code>q</code>; defaults to <code>TRUE</code></li>
+</ul>
+</div>
+<div id="qnormp-mean-0-sd-1-lower.tail-true" class="section level3">
+<h3><code>qnorm(p, mean = 0, sd = 1, lower.tail = TRUE)</code></h3>
+<ul>
+<li><code>p</code> refers to the area under the curve
+<ul>
+<li><code>qnorm(p, 0, 1)</code> is the number such that the area to the left of it is <code>p</code></li>
+</ul></li>
+<li><code>mean</code> refers to <span class="math inline">\(\mu\)</span>, defaults to 0</li>
+<li><code>sd</code> refers to <span class="math inline">\(\sigma\)</span>, defaults to 1</li>
+<li><code>lower.tail</code> controls which direction to “shade”: <code>lower.tail = TRUE</code> goes less than <code>q</code>, <code>lower.tail = FALSE</code> goes greater than <code>q</code>; defaults to <code>TRUE</code></li>
+</ul>
+</div>
+<div id="plot_normmean-0-sd-1-shadevalues-direction-col.shade-..." class="section level3">
+<h3><code>plot_norm(mean = 0, sd = 1, shadeValues, direction, col.shade, ...)</code></h3>
+<ul>
+<li><code>mean</code> refers to <span class="math inline">\(\mu\)</span>, defaults to 0</li>
+<li><code>sd</code> refers to <span class="math inline">\(\sigma\)</span>, defaults to 1</li>
+<li><code>shadeValues</code> is a vector of up to 2 numbers that define the region you want to shade</li>
+<li><code>direction</code> can be one of <code>less</code>, <code>greater</code>, <code>between</code>, or <code>beyond</code>, and controls the direction of shading between <code>shadeValues</code>. Must be <code>less</code> or <code>greater</code> if <code>shadeValues</code> has only one element; <code>between</code> or <code>beyond</code> if two</li>
+<li><code>col.shade</code> controls the color of the shaded region, defaults to <code>&quot;cornflowerblue&quot;</code></li>
+<li><code>...</code> lets you specify other graphical parameters to control the appearance of the normal curve (e.g., <code>lwd</code>, <code>lty</code>, <code>col</code>, etc.)</li>
+<li><em>NOTE</em> this is not a standard R function and cannot be used without running <code>plot_norm.R</code> provided to you in relevant labs.</li>
+</ul>
+</div>
 </div>
 </div>
 
